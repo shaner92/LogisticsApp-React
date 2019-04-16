@@ -14,27 +14,27 @@ export class navbar extends Component {
     render() {
         return (
             <Router>
-            <div>
-                <Navbar bg="dark" variant="dark">
-                    <Navbar.Brand href="/home">Logistics</Navbar.Brand>
-                    <Nav className="mr-auto">
-                        <Nav.Link href="/Home">Home</Nav.Link>
-                        <Nav.Link href="/BolCreate">Bill of Lading</Nav.Link>
-                        <Nav.Link href="/PackSlip">Packing Slip</Nav.Link>
-                        <Nav.Link href="/ProdManage">Product Management</Nav.Link>
-                    </Nav>
-                    <Form inline>
-                        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                        <Button variant="outline-info">Search</Button>
-                    </Form>
-                </Navbar>
-                <Switch>
-              <Route exact path='/' component={Home} />
-              <Route path='/BolCreate' component={BolCreate} />
-              <Route path='/packslip' component={PackSlip} />
-              <Route path='/prodmanage' component={ProdManage} />
-          </Switch>
-            </div>
+                <div>
+                    <Navbar bg="dark" variant="dark">
+                        <Navbar.Brand href="/home">Logistics</Navbar.Brand>
+                        <Nav className="mr-auto">
+                            <Nav.Link href="/Home">Home</Nav.Link>
+                            <Nav.Link href="/BolCreate">Bill of Lading</Nav.Link>
+                            <Nav.Link href="/PackSlip">Packing Slip</Nav.Link>
+                            <Nav.Link href="/ProdManage">Product Management</Nav.Link>
+                        </Nav>
+                        <Form inline>
+                            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+                            <Button variant="outline-info">Search</Button>
+                        </Form>
+                    </Navbar>
+                    <Switch>
+                        <Route exact path='/' component={Home} />
+                        <Route path='/BolCreate' component={BolCreate} />
+                        <Route path='/PackSlip' component={PackSlip} />
+                        <Route path='/ProdManage' component={ProdManage} />
+                    </Switch>
+                </div>
             </Router>
         )
     }
