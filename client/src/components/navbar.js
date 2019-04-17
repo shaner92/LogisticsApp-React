@@ -10,13 +10,15 @@ import BolCreate from './BolCreate';
 import PackSlip from './PackSlip';
 import ProdManage from './ProdManage';
 
-export class navbar extends Component {
+export class NavBar extends Component {
     render() {
         return (
             <Router>
                 <div>
-                    <Navbar bg="dark" variant="dark">
+                    <Navbar bg="dark" variant="dark" expand="lg">
                         <Navbar.Brand href="/home">Logistics</Navbar.Brand>
+                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                        <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
                             <Nav.Link href="/Home">Home</Nav.Link>
                             <Nav.Link href="/BolCreate">Bill of Lading</Nav.Link>
@@ -27,6 +29,7 @@ export class navbar extends Component {
                             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
                             <Button variant="outline-info">Search</Button>
                         </Form>
+                        </Navbar.Collapse>
                     </Navbar>
                     <Switch>
                         <Route exact path='/' component={Home} />
@@ -40,4 +43,4 @@ export class navbar extends Component {
     }
 }
 
-export default navbar
+export default NavBar
