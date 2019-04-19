@@ -1,5 +1,4 @@
 const express = require('express');
-var _ = require("underscore");
 
 const app = express();
 
@@ -11,7 +10,15 @@ const bols = [
   { bol_id: 123460, customer: 'Rona', date: '2012-04-25T18:25:43.511Z' },
   { bol_id: 123461, customer: 'Lowes', date: '2012-04-25T18:25:43.511Z' },
   { bol_id: 123462, customer: 'Tim the ToolMans Tools', date: '2012-04-25T18:25:43.511Z' }
+];
 
+const products = [
+{prod_id: 1, Name: "Hammer", Qty: 76, Unit: "Piece"},
+{prod_id: 2, Name: "Wrench", Qty: 23, Unit: "Case"},
+{prod_id: 3, Name: "Plunger", Qty: 49 , Unit: "Piece"},
+{prod_id: 4, Name: "Towel", Qty: 112, Unit: "Case"},
+{prod_id: 5, Name: "Screw driver", Qty: 18, Unit: "Piece"},
+{prod_id: 6, Name: "Tape", Qty: 50, Unit: "Piece"}
 ];
 
 app.get('/api/bols', (req, res) => {
@@ -36,6 +43,12 @@ app.get('/api/bols', (req, res) => {
     res.json(bols);
   }
 });
+
+app.get('/api/products', (req, res) => {
+    res.json(products);
+  
+});
+
 
 const port = 5000;
 

@@ -5,10 +5,10 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
-import Home from './Home';
+import Home from './Home/Home';
 import BolCreate from './BOL/BolCreate';
-import PackSlip from './PackSlip';
-import ProdManage from './ProdManage';
+import PackSlip from './PackingSlip/PackSlip';
+import ProdManage from './ProductManager/ProdManage';
 
 export class NavBar extends Component {
     render() {
