@@ -3,22 +3,22 @@ const express = require('express');
 const app = express();
 
 const bols = [
-  { bol_id: 123456, customer: 'Walmart', date: '2012-04-24T18:25:43.511Z' },
-  { bol_id: 123457, customer: 'Canadian Tire', date: '2012-04-23T18:25:43.511Z' },
-  { bol_id: 123458, customer: 'Best Buy', date: '2012-04-25T18:25:43.511Z' },
-  { bol_id: 123459, customer: 'Tonys Tacos', date: '2012-04-25T18:25:43.511Z' },
-  { bol_id: 123460, customer: 'Rona', date: '2012-04-25T18:25:43.511Z' },
-  { bol_id: 123461, customer: 'Lowes', date: '2012-04-25T18:25:43.511Z' },
-  { bol_id: 123462, customer: 'Tim the ToolMans Tools', date: '2012-04-25T18:25:43.511Z' }
+  { bol_id: 123456, customer: 'Walmart', date: '2012-04-24T18:25:43' },
+  { bol_id: 123457, customer: 'Canadian Tire', date: '2012-04-23T18:25:43' },
+  { bol_id: 123458, customer: 'Best Buy', date: '2012-04-25T18:25:43' },
+  { bol_id: 123459, customer: 'Tonys Tacos', date: '2012-04-25T18:25:43' },
+  { bol_id: 123460, customer: 'Rona', date: '2012-04-25T18:25:43' },
+  { bol_id: 123461, customer: 'Lowes', date: '2012-04-25T18:25:43' },
+  { bol_id: 123462, customer: 'Tim the ToolMans Tools', date: '2012-04-25T18:25:43' }
 ];
 
 const products = [
-{prod_id: 1, Name: "Hammer", Qty: 76, Unit: "Piece"},
-{prod_id: 2, Name: "Wrench", Qty: 23, Unit: "Case"},
-{prod_id: 3, Name: "Plunger", Qty: 49 , Unit: "Piece"},
-{prod_id: 4, Name: "Towel", Qty: 112, Unit: "Case"},
-{prod_id: 5, Name: "Screw driver", Qty: 18, Unit: "Piece"},
-{prod_id: 6, Name: "Tape", Qty: 50, Unit: "Piece"}
+{prod_id: 1, name: "Hammer", description:"Made with new carbon reinfored head", qty: 76, unit: "Piece", active:true},
+{prod_id: 2, name: "Wrench", description:"Made with new carbon reinfored head", qty: 23, Unit: "Case",active:true},
+{prod_id: 3, name: "Plunger", description:"Made with new carbon reinfored head",qty: 49 , Unit: "Piece", active:true},
+{prod_id: 4, name: "Towel", description:"Made with new carbon reinfored head",qty: 112, Unit: "Case", active:true},
+{prod_id: 5, name: "Screw driver", description:"Made with new carbon reinfored head",qty: 18, Unit: "Piece", active:true},
+{prod_id: 6, name: "Tape", description:"Made with new carbon reinfored head",qty: 50, Unit: "Piece", active:true}
 ];
 
 app.get('/api/bols', (req, res) => {
@@ -26,12 +26,12 @@ app.get('/api/bols', (req, res) => {
   let filteredBols = [];
 
   if (searchValue != undefined) {
-    searchValue = searchValue.toString();
+    searchValue = searchValue.toString().toLowerCase();
 
     bols.forEach(function (bol) {
-      const bolID = bol.bol_id.toString();
-      const customer = bol.customer.toString();
-      const date = bol.date.toString();
+      const bolID = bol.bol_id.toString().toLowerCase();
+      const customer = bol.customer.toString().toLowerCase();
+      const date = bol.date.toString().toLowerCase();
       
       if (bolID.indexOf(searchValue) != -1 || customer.indexOf(searchValue) != -1 || date.indexOf(searchValue) != -1) {
         filteredBols.push(bol);
@@ -48,7 +48,6 @@ app.get('/api/products', (req, res) => {
     res.json(products);
   
 });
-
 
 const port = 5000;
 
