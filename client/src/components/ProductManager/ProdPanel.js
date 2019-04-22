@@ -4,13 +4,9 @@ import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 export class ProdPanel extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
-            <Card className="float-right" responsive style={{ maxWidth: '24rem' }} >
+            <Card className="float-left" responsive style={{ maxWidth: '24rem' }} >
                 <Card.Body>
                     <Card.Title>{this.props.name}</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted">{this.props.description}</Card.Subtitle>
@@ -19,9 +15,9 @@ export class ProdPanel extends Component {
                         the card's content.
                     </Card.Text>
                     <Form inline className="pb-3 pr-5 float-right">
-                    <Form.Group>
+                    <Form.Group className="">
                         <Form.Label>Quantity:</Form.Label>
-                        <FormControl type="text" placeholder={this.props.qty} className="mr-sm-2" onChange={this.props.updateInput} />
+                        <FormControl type="text" className="mr-sm-2" onChange={this.props.updateInput} defaultValue={this.props.qty}/>
                     </Form.Group>
                     {/* <Form.Group>
                         <Form.Label>Unit:</Form.Label>

@@ -23,7 +23,7 @@ export class ProdManage extends Component {
         <ProdSort />
         {this.state.products.map(product =>
           <ProdPanel key={product.prod_id} name={product.name} description={product.description} qty={product.qty} />
-        )};
+        )}
       </div>
     )
   }
