@@ -8,7 +8,7 @@ import './ProdPanel.css';
 export class ProdPanel extends Component {
     render() {
         return (
-            <Card  responsive className='cardPanel'>
+            <Card className="cardPanel">
                 <Card.Body className="cardBody">
                     <Card.Title>{this.props.name}</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted">{this.props.description}</Card.Subtitle>
@@ -17,7 +17,7 @@ export class ProdPanel extends Component {
                         the card's content.
                     </Card.Text>
                     <Form inline className="pb-3 pr-5">
-                    <Form.Group className="">
+                    <Form.Group >
                         <Form.Label>Quantity:</Form.Label>
                         <FormControl type="text" className="mr-sm-2" onChange={this.props.updateInput} defaultValue={this.props.qty}/>
                     </Form.Group>

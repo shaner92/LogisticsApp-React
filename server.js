@@ -12,6 +12,15 @@ const bols = [
   { bol_id: 123462, customer: 'Tim the ToolMans Tools', date: '2012-04-25T18:25:43' }
 ];
 
+const customer_info = [
+  {customer_id: 1, customer_name: 'Walmart', country: 'Canada', province:'Ontario', city:'Windsor', Address:'7100 Tecumseh Rd E', post_code:'N8T 1E6'},
+  {customer_id: 2, customer_name: 'Canadian Tire', country: 'Canada', province:'Ontario', city:'Windsor', Address:'7100 Tecumseh Rd E', post_code:'N8T 1E6'},
+  {customer_id: 3, customer_name: 'Best Buy', country: 'Canada', province:'Ontario', city:'Windsor', Address:'7100 Tecumseh Rd E', post_code:'N8T 1E6'},
+  {customer_id: 4, customer_name: 'Tonys Tacos', country: 'Canada', province:'Ontario', city:'Windsor', Address:'7100 Tecumseh Rd E', post_code:'N8T 1E6'},
+  {customer_id: 5, customer_name: 'Rona', country: 'Canada', province:'Ontario', city:'Windsor', Address:'7100 Tecumseh Rd E', post_code:'N8T 1E6'}
+
+]
+
 const products = [
 {prod_id: 1, name: "Hammer", description:"Made with new carbon reinfored head", qty: 76, unit: "Piece", active:true},
 {prod_id: 2, name: "Wrench", description:"Made with new carbon reinfored head", qty: 23, Unit: "Case",active:true},

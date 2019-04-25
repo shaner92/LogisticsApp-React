@@ -1,24 +1,21 @@
 import React, { Component } from 'react'
+import store from '../../store/index'
+import {addBol, removeBol} from '../.././actions'
 
 export class BolSelector extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            selected:[]
-          };
+        this.store = store;
+
         this.handleSelect = this.handleSelect.bind(this);
     }
     handleSelect(event) {
-        if(!event.target.checked){
-            let selected = [...this.state.selected];
-            selected.push({value: this.props.bol_id});
-            this.setState({selected});
+        if(event.target.checked){
+            this.store.dispatch(addBol({value: this.props.bol_id}));
+            console.log(this.store.getState().selected_bol);
         }else{
-            let selected = [...this.state.selected];
-            let index = selected.indexOf(this.props.bol_id);
-            selected.splice(index,1);
-            this.setState({selected});
-
+            this.store.dispatch(removeBol({value: this.props.bol_id}));
+            console.log(this.store.getState().selected_bol);
         }
     }
 

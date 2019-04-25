@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
-import FormControl from 'react-bootstrap/FormControl';
-import Button from 'react-bootstrap/Button';
+// import Form from 'react-bootstrap/Form';
+// import FormControl from 'react-bootstrap/FormControl';
+// import Button from 'react-bootstrap/Button';
 import Home from './Home/Home';
 import BolCreate from './BOL/BolCreate';
 import BolEdit from './BOL/BolEdit';
@@ -26,10 +26,10 @@ export class NavBar extends Component {
                             <Nav.Link href="/Packing-Slip-Creator">Packing Slip</Nav.Link>
                             <Nav.Link href="/Product-Manager">Product Management</Nav.Link>
                         </Nav>
-                        <Form inline>
+                        {/* <Form inline>
                             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
                             <Button variant="outline-info">Search</Button>
-                        </Form>
+                        </Form> */}
                         </Navbar.Collapse>
                     </Navbar>
                     <Switch>
@@ -38,7 +38,6 @@ export class NavBar extends Component {
                         <Route path='/Bill-of-Lading-Editor' component={BolEdit} />
                         <Route path='/Packing-Slip-Creator' component={PackSlip} />
                         <Route path='/Product-Manager' component={ProdManage} />
-                       
                     </Switch>
                 </div>
             </Router>
