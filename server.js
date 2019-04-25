@@ -3,13 +3,13 @@ const express = require('express');
 const app = express();
 
 const bols = [
-  { bol_id: 123456, customer: 'Walmart', date: '2012-04-24T18:25:43' },
-  { bol_id: 123457, customer: 'Canadian Tire', date: '2012-04-23T18:25:43' },
-  { bol_id: 123458, customer: 'Best Buy', date: '2012-04-25T18:25:43' },
-  { bol_id: 123459, customer: 'Tonys Tacos', date: '2012-04-25T18:25:43' },
-  { bol_id: 123460, customer: 'Rona', date: '2012-04-25T18:25:43' },
-  { bol_id: 123461, customer: 'Lowes', date: '2012-04-25T18:25:43' },
-  { bol_id: 123462, customer: 'Tim the ToolMans Tools', date: '2012-04-25T18:25:43' }
+  { bol_id: 123456, customer_id: 1, date: '2012-04-24T18:25:43' },
+  { bol_id: 123457, customer_id: 2, date: '2012-04-23T18:25:43' },
+  { bol_id: 123458, customer_id: 3, date: '2012-04-25T18:25:43' },
+  { bol_id: 123459, customer_id: 4, date: '2012-04-25T18:25:43' },
+  { bol_id: 123460, customer_id: 5, date: '2012-04-25T18:25:43' },
+  { bol_id: 123461, customer_id: 6, date: '2012-04-25T18:25:43' },
+  { bol_id: 123462, customer_id: 7, date: '2012-04-25T18:25:43' }
 ];
 
 const customer_info = [
@@ -17,7 +17,9 @@ const customer_info = [
   {customer_id: 2, customer_name: 'Canadian Tire', country: 'Canada', province:'Ontario', city:'Windsor', Address:'7100 Tecumseh Rd E', post_code:'N8T 1E6'},
   {customer_id: 3, customer_name: 'Best Buy', country: 'Canada', province:'Ontario', city:'Windsor', Address:'7100 Tecumseh Rd E', post_code:'N8T 1E6'},
   {customer_id: 4, customer_name: 'Tonys Tacos', country: 'Canada', province:'Ontario', city:'Windsor', Address:'7100 Tecumseh Rd E', post_code:'N8T 1E6'},
-  {customer_id: 5, customer_name: 'Rona', country: 'Canada', province:'Ontario', city:'Windsor', Address:'7100 Tecumseh Rd E', post_code:'N8T 1E6'}
+  {customer_id: 5, customer_name: 'Rona', country: 'Canada', province:'Ontario', city:'Windsor', Address:'7100 Tecumseh Rd E', post_code:'N8T 1E6'},
+  {customer_id: 5, customer_name: 'Lowes', country: 'Canada', province:'Ontario', city:'Windsor', Address:'7100 Tecumseh Rd E', post_code:'N8T 1E6'},
+  {customer_id: 5, customer_name: 'Tim the ToolMans Tools', country: 'Canada', province:'Ontario', city:'Windsor', Address:'7100 Tecumseh Rd E', post_code:'N8T 1E6'}
 
 ]
 
@@ -29,6 +31,11 @@ const products = [
 {prod_id: 5, name: "Screw driver", description:"Made with new carbon reinfored head",qty: 18, Unit: "Piece", active:true},
 {prod_id: 6, name: "Tape", description:"Made with new carbon reinfored head",qty: 50, Unit: "Piece", active:true}
 ];
+
+let data = [];
+function buildData(){
+
+}
 
 app.get('/api/bols', (req, res) => {
   let searchValue = req.query.SearchValue;

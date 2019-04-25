@@ -23,6 +23,7 @@ export class NavBar extends Component {
                         <Nav className="mr-auto">
                             <Nav.Link href="/Home">Home</Nav.Link>
                             <Nav.Link href="/Bill-of-Lading-Creator">Bill of Lading</Nav.Link>
+                              {/* <Link to="/Bill-of-Lading-Creator">Bill of Lading</Link> */}
                             <Nav.Link href="/Packing-Slip-Creator">Packing Slip</Nav.Link>
                             <Nav.Link href="/Product-Manager">Product Management</Nav.Link>
                         </Nav>

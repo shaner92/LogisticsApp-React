@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
 import './BolCreate.css';
 import BolSearch from './BolSearch';
@@ -35,7 +36,7 @@ class BolCreate extends Component {
         <BolSearch updateInput = {this.updateInput.bind(this)} handleSearch={this.handleSearch.bind(this)} bols={this.state.bols}/>
         <BolTable bols={this.state.bols} />
    
-        <Button variant="outline-dark" size="lg" className="launch-button" href="/Bill-of-Lading-Editor" > Launch</Button>
+        <Link to="/Bill-of-Lading-Editor"> <Button variant="outline-dark" size="lg" className="launch-button">  Launch </Button>  </Link>
       </div>
     );
   }
