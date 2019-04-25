@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export class ProdManage extends Component {
+export class BolEdit extends Component {
   render() {
     return (
       <div>
@@ -10,4 +10,4 @@ export class ProdManage extends Component {
   }
 }
 
-export default ProdManage
+export default BolEdit

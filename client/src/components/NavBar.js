@@ -5,10 +5,11 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
-import Home from './Home';
-import BolCreate from './BolCreate';
-import PackSlip from './PackSlip';
-import ProdManage from './ProdManage';
+import Home from './Home/Home';
+import BolCreate from './BOL/BolCreate';
+import BolEdit from './BOL/BolEdit';
+import PackSlip from './PackingSlip/PackSlip';
+import ProdManage from './ProductManager/ProdManage';
 
 export class NavBar extends Component {
     render() {
@@ -21,9 +22,9 @@ export class NavBar extends Component {
                         <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
                             <Nav.Link href="/Home">Home</Nav.Link>
-                            <Nav.Link href="/BolCreate">Bill of Lading</Nav.Link>
-                            <Nav.Link href="/PackSlip">Packing Slip</Nav.Link>
-                            <Nav.Link href="/ProdManage">Product Management</Nav.Link>
+                            <Nav.Link href="/Bill-of-Lading-Creator">Bill of Lading</Nav.Link>
+                            <Nav.Link href="/Packing-Slip-Creator">Packing Slip</Nav.Link>
+                            <Nav.Link href="/Product-Manager">Product Management</Nav.Link>
                         </Nav>
                         <Form inline>
                             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -33,9 +34,11 @@ export class NavBar extends Component {
                     </Navbar>
                     <Switch>
                         <Route exact path='/' component={Home} />
-                        <Route path='/BolCreate' component={BolCreate} />
-                        <Route path='/PackSlip' component={PackSlip} />
-                        <Route path='/ProdManage' component={ProdManage} />
+                        <Route path='/Bill-of-Lading-Creator' component={BolCreate} />
+                        <Route path='/Bill-of-Lading-Editor' component={BolEdit} />
+                        <Route path='/Packing-Slip-Creator' component={PackSlip} />
+                        <Route path='/Product-Manager' component={ProdManage} />
+                       
                     </Switch>
                 </div>
             </Router>
