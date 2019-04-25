@@ -9,7 +9,6 @@ export class BolSelector extends Component {
         this.handleSelect = this.handleSelect.bind(this);
     }
     handleSelect(event) {
-        //this.props.onSelectorClick(this.props.selected);
         if(!event.target.checked){
             let selected = [...this.state.selected];
             selected.push({value: this.props.bol_id});

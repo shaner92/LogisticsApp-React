@@ -4,7 +4,7 @@ import Table from 'react-bootstrap/Table'
 export class BolTable extends Component {
     render() {
         return (
-            <Table responsive hover>
+            <Table responsive hover >
                 <thead className='bg-light'>
                     <tr >
                         <th>Bill of Lading ID</th>
@@ -14,7 +14,7 @@ export class BolTable extends Component {
                     </tr>
 
                 </thead>
-                <tbody>
+                <tbody >
                     {this.props.bols.map(bol =>
                         <tr key={bol.bol_id}>
                             <td >{bol.bol_id}</td>
