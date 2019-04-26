@@ -3,26 +3,33 @@ const express = require('express');
 const app = express();
 
 const bols = [
-  { bol_id: 123456, 
-    customer:{name: 'Walmart', country: 'Canada', province:'Ontario', city:'Windsor', Address:'7100 Tecumseh Rd E', post_code:'N8T 1E6'}, 
+  { bol_id: 123456,
+    shipper:{name:'Shane\'s Shipping', country:'Canada', province:'Ontario', city:'Chatham', address:'123 Keil Drive', post_code:'N9G 2F4'}, 
+    customer:{name: 'Walmart', country: 'Canada', province:'Ontario', city:'Windsor', address:'7100 Tecumseh Rd E', post_code:'N8T 1E6'}, 
     date: '2012-04-24T18:25:43' },
   { bol_id: 123457, 
-    customer:{name: 'Canadian Tire', country: 'Canada', province:'Ontario', city:'Windsor', Address:'7100 Tecumseh Rd E', post_code:'N8T 1E6'},  
+    shipper:{name:'Shane\'s Shipping', country:'Canada', province:'Ontario', city:'Chatham', address:'123 Keil Drive', post_code:'N9G 2F4'}, 
+    customer:{name: 'Canadian Tire', country: 'Canada', province:'Ontario', city:'Windsor', address:'7100 Tecumseh Rd E', post_code:'N8T 1E6'},  
     date: '2012-04-23T18:25:43' },
   { bol_id: 123458, 
-    customer:{name: 'Rona', country: 'Canada', province:'Ontario', city:'Windsor', Address:'7100 Tecumseh Rd E', post_code:'N8T 1E6'},  
+    shipper:{name:'Shane\'s Shipping', country:'Canada', province:'Ontario', city:'Chatham', address:'123 Keil Drive', post_code:'N9G 2F4'}, 
+    customer:{name: 'Rona', country: 'Canada', province:'Ontario', city:'Windsor', address:'7100 Tecumseh Rd E', post_code:'N8T 1E6'},  
     date: '2012-04-25T18:25:43' },
   { bol_id: 123459, 
-    customer:{name: 'Lowes', country: 'Canada', province:'Ontario', city:'Windsor', Address:'7100 Tecumseh Rd E', post_code:'N8T 1E6'},  
+    shipper:{name:'Shane\'s Shipping', country:'Canada', province:'Ontario', city:'Chatham', address:'123 Keil Drive', post_code:'N9G 2F4'}, 
+    customer:{name: 'Lowes', country: 'Canada', province:'Ontario', city:'Windsor', address:'7100 Tecumseh Rd E', post_code:'N8T 1E6'},  
     date: '2012-04-25T18:25:43' },
   { bol_id: 123460, 
-    customer:{name: 'Home Hardware', country: 'Canada', province:'Ontario', city:'Windsor', Address:'7100 Tecumseh Rd E', post_code:'N8T 1E6'},  
+    shipper:{name:'Shane\'s Shipping', country:'Canada', province:'Ontario', city:'Chatham', address:'123 Keil Drive', post_code:'N9G 2F4'}, 
+    customer:{name: 'Home Hardware', country: 'Canada', province:'Ontario', city:'Windsor', address:'7100 Tecumseh Rd E', post_code:'N8T 1E6'},  
     date: '2012-04-25T18:25:43' },
   { bol_id: 123461, 
-    customer:{name: 'Tim the ToolMan Tools', country: 'Canada', province:'Ontario', city:'Windsor', Address:'7100 Tecumseh Rd E', post_code:'N8T 1E6'},  
+    shipper:{name:'Shane\'s Shipping', country:'Canada', province:'Ontario', city:'Chatham', address:'123 Keil Drive', post_code:'N9G 2F4'}, 
+    customer:{name: 'Tim the ToolMan Tools', country: 'Canada', province:'Ontario', city:'Windsor', address:'7100 Tecumseh Rd E', post_code:'N8T 1E6'},  
     date: '2012-04-25T18:25:43' },
   { bol_id: 123462, 
-    customer:{name: 'Randys Goods', country: 'Canada', province:'Ontario', city:'Windsor', Address:'7100 Tecumseh Rd E', post_code:'N8T 1E6'},  
+    shipper:{name:'Shane\'s Shipping', country:'Canada', province:'Ontario', city:'Chatham', address:'123 Keil Drive', post_code:'N9G 2F4'}, 
+    customer:{name: 'Randys Goods', country: 'Canada', province:'Ontario', city:'Windsor', address:'7100 Tecumseh Rd E', post_code:'N8T 1E6'},  
     date: '2012-04-25T18:25:43' }
 ];
 
@@ -66,7 +73,6 @@ app.get('/api/bol', (req, res) => {
     bols.forEach(function (bol) {
       const bolID = bol.bol_id.toString().toLowerCase();
       if (bolID.indexOf(searchValue) != -1 ) {
-        console.log(bol);
         res.json(bol);
       }
     })

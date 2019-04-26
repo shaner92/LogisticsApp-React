@@ -21,7 +21,7 @@ export class ProdPanel extends Component {
                         <Form.Label>Quantity:</Form.Label>
                         <FormControl type="text" className="mr-sm-2" onChange={this.props.updateInput} defaultValue={this.props.qty}/>
                     </Form.Group>
-                    <Form.Group classNmae="cardButtons">
+                    <Form.Group className="cardButtons">
                         <Button variant="outline-info cardButton">Save Changes</Button>
                         <Button variant="outline-danger cardButton">Delete Product</Button>
                     </Form.Group>

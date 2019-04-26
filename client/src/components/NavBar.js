@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-// import Form from 'react-bootstrap/Form';
-// import FormControl from 'react-bootstrap/FormControl';
-// import Button from 'react-bootstrap/Button';
 import Home from './Home/Home';
 import BolCreate from './BOL/BolCreate';
 import BolEdit from './BOL/BolEdit';
@@ -23,7 +20,6 @@ export class NavBar extends Component {
                         <Nav className="mr-auto">
                             <Nav.Link href="/Home">Home</Nav.Link>
                             <Nav.Link href="/Bill-of-Lading-Creator">Bill of Lading</Nav.Link>
-                              {/* <Link to="/Bill-of-Lading-Creator">Bill of Lading</Link> */}
                             <Nav.Link href="/Packing-Slip-Creator">Packing Slip</Nav.Link>
                             <Nav.Link href="/Product-Manager">Product Management</Nav.Link>
                         </Nav>

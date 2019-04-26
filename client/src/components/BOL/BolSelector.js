@@ -8,7 +8,7 @@ export class BolSelector extends Component {
         this.handleSelect = this.handleSelect.bind(this);
     }
     handleSelect(event) {
-            store.dispatch(selectBol({value: this.props.bol_id}));
+            store.dispatch(selectBol({value: this.props.bol}));
             console.log(store.getState().selected_bol);
     }
 

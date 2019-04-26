@@ -19,13 +19,15 @@ export class ProdManage extends Component {
 
   render() {
     return (
-      <div className="prodManager">
+     <div>
         <h2 className="pt-5 pb-3 prodHeader">Manager Your Products Here:</h2>
-        <ProdSort />
+        <div className="prodManager">
+        {/* <ProdSort /> */}
         {this.state.products.map(product =>
           <ProdPanel key={product.prod_id} name={product.name} description={product.description} qty={product.qty} />
         )}
       </div>
+    </div>
     )
   }
 }

@@ -20,7 +20,7 @@ export class BolTable extends Component {
                             <td >{bol.bol_id}</td>
                             <td>{bol.customer.name}</td>
                             <td>{bol.date}</td>
-                            <BolSelector bol_id={bol.bol_id} handleSelect={this.props.handleSelect} />
+                            <BolSelector bol={bol} handleSelect={this.props.handleSelect} />
                         </tr>
                     )}
                 </tbody>

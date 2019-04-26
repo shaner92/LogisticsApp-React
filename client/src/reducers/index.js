@@ -1,5 +1,5 @@
 const initialState = {
-    selected_bol: ''
+    selected_bol: {}
 }
 
 function rootReducer (state = initialState, { type, payload })  {
