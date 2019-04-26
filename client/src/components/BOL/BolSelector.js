@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import store from '../../store/index'
-import {addBol, removeBol} from '../.././actions'
+import {selectBol} from '../.././actions'
 
 export class BolSelector extends Component {
     constructor(props) {
@@ -8,18 +8,13 @@ export class BolSelector extends Component {
         this.handleSelect = this.handleSelect.bind(this);
     }
     handleSelect(event) {
-        if(event.target.checked){
-            store.dispatch(addBol({value: this.props.bol_id}));
+            store.dispatch(selectBol({value: this.props.bol_id}));
             console.log(store.getState().selected_bol);
-        }else{
-            store.dispatch(removeBol({value: this.props.bol_id}));
-            console.log(store.getState().selected_bol);
-        }
     }
 
     render() {
         return (
-            <td><input type="checkbox" name="name" onClick={this.handleSelect} />&nbsp;</td>
+            <td><input type="radio" name="name" onClick={this.handleSelect} />&nbsp;</td>
         )
     }
 }

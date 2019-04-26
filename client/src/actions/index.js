@@ -1,10 +1,10 @@
-export const addBol = (payload) => ({
-  type: 'ADD_BOL',
+export const selectBol = (payload) => ({
+  type: 'SELECT_BOL',
   payload
 })
 
-export const removeBol = (payload) => ({
-  type: 'REMOVE_BOL',
+export const clearBol = (payload) => ({
+  type: 'CLEAR_BOL',
   payload
 })
 
