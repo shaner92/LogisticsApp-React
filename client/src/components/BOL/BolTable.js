@@ -16,8 +16,8 @@ export class BolTable extends Component {
                 </thead>
                 <tbody >
                     {this.props.bols.map(bol =>
-                        <tr key={bol.bol_id}>
-                            <td >{bol.bol_id}</td>
+                        <tr key={bol.id}>
+                            <td >{bol.id}</td>
                             <td>{bol.customer.name}</td>
                             <td>{bol.date}</td>
                             <BolSelector bol={bol} handleSelect={this.props.handleSelect} />

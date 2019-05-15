@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import Home from './Home/Home';
-import BolCreate from './BOL/BolCreate';
-import BolEdit from './BOL/BolEdit';
-import PackSlip from './PackingSlip/PackSlip';
-import ProdManage from './ProductManager/ProdManage';
+import Home from '../Home/Home';
+import BolCreate from '../BOL/BolCreate';
+import BolEdit from '../BOL/BolEdit';
+import PackSlip from '../PackingSlip/PackSlip';
+import ProdManage from '../ProductManager/ProdManage';
 
 export class NavBar extends Component {
     render() {
@@ -14,14 +14,14 @@ export class NavBar extends Component {
             <Router>
                 <div>
                     <Navbar bg="dark" variant="dark" expand="lg">
-                        <Navbar.Brand href="/home">Logistics</Navbar.Brand>
+                        <Navbar.Brand href="/">Logistics</Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
-                            <Nav.Link href="/Home">Home</Nav.Link>
-                            <Nav.Link href="/Bill-of-Lading-Creator">Bill of Lading</Nav.Link>
-                            <Nav.Link href="/Packing-Slip-Creator">Packing Slip</Nav.Link>
-                            <Nav.Link href="/Product-Manager">Product Management</Nav.Link>
+                            <Link to="/" className="nav-link">Home</Link>
+                            <Link to="/Bill-of-Lading-Creator" className="nav-link">Bill of Lading</Link>
+                            <Link to="/Packing-Slip-Creator" className="nav-link">Packing Slip</Link>
+                            <Link to="/Product-Manager" className="nav-link">Product Management</Link>
                         </Nav>
                         {/* <Form inline>
                             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
